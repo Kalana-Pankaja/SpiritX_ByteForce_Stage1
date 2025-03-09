@@ -1,0 +1,221 @@
+
+.checkbox-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    margin-top: 10px;
+    gap: 8px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin: 0;
+    cursor: pointer;
+}
+
+.checkbox-container label {
+    font-size: 14px;
+    color: white;
+    margin: 0;
+    cursor: pointer;
+}
+
+body {
+    background: linear-gradient(135deg, #ff9f1c, #000000);
+    font-family: "Maven pro";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+    opacity: 0.1;
+    z-index: 0;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+.fb{
+    display: flex;
+    align-items: center;
+}
+
+.form-box {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 95%;
+    text-align: center;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+h2 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    color: white;
+}
+
+
+input {
+    width: 93%;
+    padding: 12px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+input[type="checkbox"]{
+    width: 15px;
+}
+
+
+input:focus {
+    background: rgba(255, 255, 255, 0.5);
+    color: black; 
+}
+
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.btn {
+    background: linear-gradient(135deg, #ff9f1c, #ff6b6b);
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.btn:hover {
+    background: linear-gradient(135deg, #ff6b6b, #ff9f1c);
+    box-shadow: 0px 5px 15px rgba(255, 107, 107, 0.5); 
+}
+
+
+.error {
+    color: #ff3b3b;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
+
+
+.signin {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signin a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.signin a:hover {
+    color: #ff3b3b;
+}
+
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+
+body::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    border-radius: 50%;
+    top: 10%;
+    left: 15%;
+    animation: float 6s ease-in-out infinite;
+    z-index: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    border-radius: 50%;
+    bottom: 15%;
+    right: 10%;
+    animation: float 8s ease-in-out infinite;
+    z-index: 0;
+}
+
+
+@media (max-width: 480px) {
+    .form-box {
+        max-width: 300px; 
+        padding: 30px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
